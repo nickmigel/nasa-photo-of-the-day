@@ -1,3 +1,8 @@
+html{
+  font-size: 62.5%;
+  color: #f0f0f0;
+}
+
 .App {
   text-align: left;
 }
@@ -30,4 +35,45 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+*{
+  background-color: #364f6b;
+}
+
+.date{
+  font-size: 1.6rem;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+.titleBackground{
+  background-color: #fc5185;
+  height: 30vh;
+  width: 30%;
+  margin-top: 4.5%;
+}
+
+.title{
+  margin-top: 16%;
+  margin-left: 16%;
+  background-color:  #fc5185;
+  font-size: 3rem;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-img{
+	width: 30vw;
+}
+
+.info{
+  display: flex;
+}
+
+.logo{
+  border-radius: 50%;
 }

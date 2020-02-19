@@ -17,13 +17,13 @@ function App() {
 
   return (
     <div className="App">
-      <p>{nasa.date}</p>
+      <p className="date">{nasa.date}</p>
       <div className="header">
-        <Title className="title" title={nasa.title} />
-        <Picture className="changingImg" img={nasa.hdurl} />
+        <Title title={nasa.title} />
+        <Picture img={nasa.hdurl} />
       </div>
       <div className="info">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj-A3Dv3L1YEW75oDajyTXbzr9n6rI6j2DAy5RWp9YlIQApgpj3a-LbfC4Xb9J&s" alt="nasa logo" />
+        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj-A3Dv3L1YEW75oDajyTXbzr9n6rI6j2DAy5RWp9YlIQApgpj3a-LbfC4Xb9J&s" alt="nasa logo" />
         <Description description={nasa.explanation} />
       </div>
       <a href="https://www.nasa.gov/">visit nasa website</a>
