@@ -70,10 +70,30 @@ html{
 	width: 30vw;
 }
 
+.descDiv{
+  width: 30%;
+  margin-right: 10%;
+}
+
+.description{
+  font-size: 1.6rem;
+}
+
 .info{
   display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 2%;
 }
 
 .logo{
   border-radius: 50%;
+  margin-left: 15%;
+}
+
+a{
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 1.6rem;
+  margin-left: 43%;
 }

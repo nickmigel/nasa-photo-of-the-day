@@ -2,8 +2,8 @@ import React from 'react'
 
 function Description(props) {
     return (
-        <div>
-            <p>{props.description}</p>
+        <div className="descDiv">
+            <p className="description">{props.description}</p>
         </div>
     )
 }
