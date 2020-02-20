@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import axios from 'axios'
-import Title from './components/title/title'
-import Picture from './components/image/image'
-import Description from './components/description/description'
+import './App.css'
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 
 
 function App() {
@@ -14,19 +15,17 @@ function App() {
         setNasa(response.data)
       })
   }, [])
-
   return (
     <div className="App">
-      <p className="date">{nasa.date}</p>
-      <div className="header">
-        <Title title={nasa.title} />
-        <Picture img={nasa.hdurl} />
-      </div>
-      <div className="info">
-        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj-A3Dv3L1YEW75oDajyTXbzr9n6rI6j2DAy5RWp9YlIQApgpj3a-LbfC4Xb9J&s" alt="nasa logo" />
-        <Description description={nasa.explanation} />
-      </div>
-      <a href="https://www.nasa.gov/">visit nasa website</a>
+      <Card className='container'>
+        <CardImg top width="100%" width="400vw" src={nasa.hdurl} alt="Image of the day" />
+        <CardBody className='flex'>
+          <CardTitle>{nasa.copyright}</CardTitle>
+          <CardSubtitle>{nasa.date}</CardSubtitle>
+          <CardText>{nasa.explanation}</CardText>
+        </CardBody>
+      </Card>
+      <a href='https://www.nasa.gov/'>visit nasa website</a>
     </div>
   );
 }
