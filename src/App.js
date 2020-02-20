@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import './App.css'
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card, CardImg, CardText, CardBody, CardLink,
+  CardTitle, CardSubtitle, Jumbotron, Container
 } from 'reactstrap';
 
 
@@ -17,14 +17,23 @@ function App() {
   }, [])
   return (
     <div className="App">
+      <Jumbotron className='header' fluid>
+        <Container fluid>
+          <h1 className="display-3">Nasa Image Of The Day</h1>
+          <p className="lead">Amazing images everyday and a snippet of information</p>
+        </Container>
+      </Jumbotron>
       <Card className='container'>
-        <CardImg top width="100%" width="400vw" src={nasa.hdurl} alt="Image of the day" />
         <CardBody className='flex'>
           <CardTitle>{nasa.copyright}</CardTitle>
           <CardSubtitle>{nasa.date}</CardSubtitle>
-          <CardText>{nasa.explanation}</CardText>
+        </CardBody>
+        <img width="400vw" src={nasa.hdurl} alt="Card image cap" />
+        <CardBody>
+          <CardText className='description'>{nasa.explanation}</CardText>
         </CardBody>
       </Card>
+
       <a href='https://www.nasa.gov/'>visit nasa website</a>
     </div>
   );

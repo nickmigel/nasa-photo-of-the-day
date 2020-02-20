@@ -2,10 +2,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #1d2d3f;
+    width: 30%;
+    margin-left: 35.4%;
+    margin-bottom: 5%;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1633&q=80);
+}
+
+*{
+    color:#f0f0f0;
+}
+
+.description{
+    width: 80%;
+    text-align: center;
+    margin: 5% auto;
+}
+
+a{
+    margin: 46%;
+    color: black;
+}
+
+.header{
+    text-align: center;
+    margin-bottom: 5%;
 }
